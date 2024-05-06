@@ -62,15 +62,15 @@
     hidden_pivots: {}
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 10
     col: 0
     width: 8
     height: 6
   - title: New Tile
     name: New Tile
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: single_value
     fields: [events.count_of_users]
@@ -124,15 +124,15 @@
     hidden_pivots: {}
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 10
     col: 8
     width: 8
     height: 6
   - title: New Tile
     name: New Tile (2)
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: single_value
     fields: [events.count_of_page_views]
@@ -186,15 +186,15 @@
     hidden_pivots: {}
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 10
     col: 16
     width: 8
     height: 6
   - title: Sessions by Cohort
     name: Sessions by Cohort
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_bar
     fields: [events.audience_trait, events.count_of_sessions]
@@ -255,15 +255,15 @@
     hidden_pivots: {}
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 16
     col: 0
     width: 8
     height: 6
   - title: Users by Cohort
     name: Users by Cohort
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_bar
     fields: [events.audience_trait, events.total_users]
@@ -324,15 +324,15 @@
     hidden_pivots: {}
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 16
     col: 8
     width: 8
     height: 6
   - title: Page Views by Cohort
     name: Page Views by Cohort
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_bar
     fields: [events.audience_trait, events.count_of_page_views]
@@ -394,15 +394,15 @@
     hidden_pivots: {}
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 16
     col: 16
     width: 8
     height: 6
   - title: Session Breakdown
     name: Session Breakdown
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_bar
     fields: [events.count_of_sessions, events.audience_trait, events_dt.event_rank_asc]
@@ -460,15 +460,15 @@
     hidden_fields: []
     hidden_points_if_no: []
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 22
     col: 0
     width: 24
     height: 6
   - title: Session by Week
     name: Session by Week
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_column
     fields: [events.count_of_sessions, events.audience_trait, events_dt.event_rank_asc,
@@ -529,15 +529,15 @@
     hidden_fields: []
     hidden_points_if_no: []
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 28
     col: 0
     width: 24
     height: 6
   - title: Top Referrers
     name: Top Referrers
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_bar
     fields: [events.traffic_source__source, events.count_of_sessions]
@@ -589,15 +589,15 @@
       events.count_of_sessions: "#F9AB00"
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 44
     col: 0
     width: 13
     height: 7
   - title: Top Landing Pages Top 10 Landing pages based on Sessions within timeframe
     name: Top Landing Pages Top 10 Landing pages based on Sessions within timeframe
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_bar
     fields: [events.count_of_sessions, events.page]
@@ -652,15 +652,15 @@
       events.count_of_sessions: "#F9AB00"
     defaults_version: 1
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 44
     col: 13
     width: 11
     height: 7
   - title: Engagement
     name: Engagement
-    model: ga4_bc_streaming
+    model: ga4_tf_streaming
     explore: events
     type: looker_grid
     fields: [events.count_of_sessions, sessions.bounce_rate, sessions.first_visit_sessions_percentage,
@@ -736,8 +736,8 @@
     defaults_version: 1
     hidden_pivots: {}
     listen:
-      Event Date: events.event_date
-      Profile: events.profile
+      # Event Date: events.event_date
+      # Profile: events.profile
     row: 34
     col: 0
     width: 24
@@ -813,7 +813,7 @@
   #   ui_config:
   #     type: relative_timeframes
   #     display: inline
-  #   model: ga4_bc_streaming
+  #   model: ga4_tf_streaming
   #   explore: events
   #   listens_to_filters: []
   #   field: events.event_date
@@ -826,7 +826,7 @@
   #   ui_config:
   #     type: dropdown_menu
   #     display: inline
-  #   model: ga4_analytics
+  #   model: ga4_tf_streaming
   #   explore: events
   #   listens_to_filters: []
   #   field: events.profile

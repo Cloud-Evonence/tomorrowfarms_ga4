@@ -1,4 +1,4 @@
-connection: "ga4_bc_streaming"
+connection: "ga4_tf_streaming"
 
 include: "/views/*.view.lkml"
 include: "/derived_tables/*.view.lkml"
